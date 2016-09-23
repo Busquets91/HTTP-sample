@@ -14,6 +14,7 @@ func main() {
 	mux.Handle("/favicon.ico", http.NotFoundHandler())
 	mux.Handle("/", handler)
 	log.Printf("Now listening on %s...\n", addr)
+	log.Printf("Bonjour\n")
 	server := http.Server{Handler: mux, Addr: addr}
 	log.Fatal(server.ListenAndServe())
 }
